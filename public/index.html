@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../src/assets/css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/date.js" defer></script>
+    <script src="js/climate.js" defer></script>
+    <script src="js/modalData.js" defer></script>
+    <script src="js/nameUserHeader.js" defer></script>
+    <script src="js/buttonCreatElement.js" defer></script>
+    <script src="js/taskcofigs.js" defer></script>
+    <title>Hello List</title>
+</head>
+<body>
+    <div class="modalConfigsTs"></div>
+    <div class="loading"></div>
+    <div id="modal">
+        <div class="titleModal">
+            Hello List
+        </div>
+        <p>Insira seus dados para melhor aproveito do Hello List!</p>
+        <form id="form">
+            <input type="text" name="name" id="inputName" placeholder="Seu nome..." data-rules="required|min=2">
+            <input type="text" name="city" id="inputCity" placeholder="Sua cidade...">
+        </form>
+        <button type="submit" id="buttonModal">
+            Enviar dados
+        </button>
+    </div>
+    <div id="modalTask">
+        <h2>Escreva sua Tarefa do dia!</h2>
+        <textarea id="textTask"></textarea>
+        <button type="submit" id="buttonTask">
+            Enviar Tarefa
+        </button>
+    </div>
+    <header>
+        <div id="userHeader">
+            <div id="weellcome">
+                Olá, <span></span>
+            </div>
+            <div id="nameUserHeader">Hello List</div>
+        </div>
+        <div id="userDateHeader">
+            <div id="dateHeader">13:42</div>
+            <div id="clima">
+                <div id="cityNameHeader"></div>
+                <div id="cityTempHeader"><span></span> Graus</div>
+            </div>
+        </div>
+    </header>
+    <section id="content">
+        <div id="toDo" class="area">
+            <button id="creatTask">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <div draggable="true" class="listTask">
+                <p>
+                    Desenvolver a API de busca de Clima para o site.
+                </p>
+            </div>
+        </div>
+        <div id="doing" class="area">
+            <button id="creatTask">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+        <div id="done" class="area">
+            <button id="creatTask">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+    </section>
+</body>
+</html>

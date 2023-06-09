@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Geologica';
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #323232;
+}
+@keyframes loading {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.modalConfigsTs{
+    display: none;
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #c60902;
+    z-index: 99;
+}
+.loading{
+    display: none;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 4px solid transparent;
+    border-top-color: #cdcdcd;
+    border-radius: 999px;
+    animation: loading 1s infinite linear;
+}
+.none{
+    display: none;
+}
+#modal{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: auto;
+    background-color: #181818;
+    border-radius: 10px;
+    padding: 20px;
+    color: #cdcdcd;
+    transition: all ease 0.3s;
+}
+.titleModal{
+    font-weight: bold;
+    font-size: 30px;
+    color: #cdcdcd;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #323232;
+    color: #cdcdcd;
+}
+#modal button, #modalTask #buttonTask{
+    width: 100%;
+    margin-top: 10px;
+    background-color: #005cdc;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#modalTask{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: auto;
+    background-color: #181818;
+    border-radius: 10px;
+    padding: 20px;
+    color: #cdcdcd;
+    transition: all ease 0.3s;
+}
+#modalTask textarea{
+    width: 100%;
+    min-height: 100px;
+    background-color: #323232;
+    color: #cdcdcd;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    resize: none;
+}
+header{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#weellcome{
+    color: #cdcdcd;
+    font-size: 20px;
+}
+#nameUserHeader{
+    font-weight: 800;
+    color: #cdcdcd;
+    font-size: 50px;
+}
+#dateHeader{ 
+    font-size: 70px;
+    font-family: 'Geologica';
+    font-weight: 800;
+    color: #cdcdcd;
+}
+#clima{
+    width: 100%;
+    height: 30px;
+    background-color: #181818;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+header #cityNameHeader{
+    color: #cdcdcd;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Geologica';
+}
+
+header #cityTempHeader{
+    font-size: 14px;
+    font-weight: 600;
+    color: #cdcdcd;
+}
+#content{
+    display: flex;
+    gap: 50px;
+    padding: 20px;
+    align-items: start;
+}
+#toDo{
+    flex: 1;
+    background-color: #181818;
+    border-radius: 5px;
+    padding: 10px;
+}
+#doing{
+    flex: 1;
+    background-color: #181818;
+    border-radius: 5px;
+    padding: 10px;
+}
+#done{
+    flex: 1;
+    background-color: #181818;
+    border-radius: 5px;
+    padding: 10px;
+}
+#creatTask{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border: 2px solid #323232;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#creatTask i{
+    font-size: 20px;
+    color: #cdcdcd;
+}
+.listTask{
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px 10px;
+    color: #181818;
+    background-color: #cdcdcd;
+    cursor: pointer;
+    user-select: none;
+}
+.listTask p{
+    margin: 0px;
+    padding: 0px;
+}
+.drag{
+    background-color: #323232;
+    color: #fff;
+    transition: all ease .2s;
+}
+.textTask{
+    width: 100%;
+    min-height: 80px;
+    background-color: #323232;
+    color: #cdcdcd;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    resize: none;    
+}
+.button{
+    width: 100%;
+    margin-top: 10px;
+    background-color: #005cdc;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttonDelete{
+    width: 100%;
+    margin-top: 10px;
+    background-color: #c60902;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
